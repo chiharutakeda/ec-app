@@ -1,7 +1,5 @@
 import React from 'react';
-import {TextInput} from "../Uikit";
 import IconButton from "@material-ui/core/IconButton";
-import EditIcon from '@material-ui/icons/Edit';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -38,7 +36,7 @@ const SizeTable = (props) =>{
                                 </TableCell>
                                 <TableCell className={classes.iconCell}>
                                     {size.quantity > 0 ? (
-                                        <IconButton>
+                                        <IconButton onClick={()=>props.addProduct(size.size)}>
                                             <ShoppingCartIcon />
                                         </IconButton>
                                     ) : (
