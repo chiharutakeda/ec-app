@@ -32,7 +32,6 @@ export const fetchProducts = () =>{
 
 export const saveProduct = (id,name,description,category,gender,price,images,sizes) =>{
     return async(dispatch) =>{
-        // console.log(firebaseTimestamp)
         const timestamp = firebaseTimestamp.now()
 
         const data = {
@@ -53,7 +52,7 @@ export const saveProduct = (id,name,description,category,gender,price,images,siz
             data.id = id
             data.created_at = timestamp
         }
-        console.log(id)
+
         return productsRef.doc(id).set(data, {merge: true})
                 .then(()=>{
                     dispatch(push('/'))
