@@ -13,8 +13,8 @@ export default function createStore(history){
     return reduxCreateStore(
         combineReducers({
             products:ProductsReducer,
-            router:connectRouter(history),
-            users: UserReducer
+            users: UserReducer,
+            router:connectRouter(history)
         }),
         applyMiddleware(
             routerMiddleware(history),

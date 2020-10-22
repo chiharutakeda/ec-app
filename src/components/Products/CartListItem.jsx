@@ -12,7 +12,7 @@ import {db} from "../../firebase/index";
 
 const useStyles = makeStyles({
     list:{
-        height:120
+        height:128,
     },
     image:{
         objectFit: 'cover',
