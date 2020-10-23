@@ -3,7 +3,7 @@ import {makeStyles} from '@material-ui/styles';
 
 const useStyles = makeStyles({
     row:{
-        displat:"flex",
+        display:"flex",
         flexFlow:'row wrap',
         marginBottom:16
     },

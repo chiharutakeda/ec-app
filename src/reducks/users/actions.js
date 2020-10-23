@@ -6,6 +6,14 @@ export const fetchProductsInCartAction = (products) =>{
     }
 };
 
+export const FETCH_ORDER_HISTORY = "FETCH_ORDER_HISTORY";
+export const fetchOrderHistoryAction = (history) =>{
+    return {
+        type : "FETCH_ORDER_HISTORY",
+        payload : history
+    }
+};
+
 export const SIGN_IN = "SIGN_IN";
 export const signInAction = (userState) =>{
     return {
