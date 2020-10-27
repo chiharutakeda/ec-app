@@ -55,7 +55,7 @@ export const listenAuthState = () => {
                     })
                 
             }else{
-                dispatch(push('/signin'))
+                dispatch(push('/signIn'))
             }
         })
     }
@@ -71,7 +71,7 @@ export const resetPassword = (email)=>{
             auth.sendPasswordResetEmail(email)
                 .then(()=>{
                     alert('入力されたアドレスにパスワードリセット用のメールを送りました。')
-                    dispatch(push('/signin'))
+                    dispatch(push('/signIn'))
                 }).catch(()=>{
                     alert('パスワードのリセットに失敗しました。')
                 })
@@ -156,7 +156,7 @@ export const signOut = () =>{
         auth.signOut()
             .then(()=>{
                 dispatch(signOutAction())
-                dispatch(push('/signin'))
+                dispatch(push('/signIn'))
             })
     }
 }
